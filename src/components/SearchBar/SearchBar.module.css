@@ -1,0 +1,36 @@
+.search {
+   
+    width: 5cm;
+    height: 30px;
+    font-size: 20px;
+    font-family:  'Arial Narrow';
+    font-weight:500;
+    color: black;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 1em;
+    background-color:rgb(193, 203, 205) ;
+    
+    
+
+}
+
+
+.butt{
+    width: auto;
+    height: 30px;
+    font-size: 20px;
+    color: beige;
+    font-family: Georgia;
+    font-weight: bold;
+    background-color: rgb(60, 10, 82);
+    border-radius: 10px;
+    border: 1px solid rgb(128, 50, 205);
+    transition: 0.3s;
+    
+}
+
+.butt:hover {
+
+    background-color: rgb(207, 78, 207);
+}
