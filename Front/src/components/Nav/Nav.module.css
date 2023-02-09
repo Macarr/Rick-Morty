@@ -1,0 +1,23 @@
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgba(113, 16, 137, 0.775);
+    width: 95%;
+    padding: 1em;
+    border-radius: 1em;
+   
+
+}
+#NavLink{
+    width: auto;
+    height: 30px;
+    font-size: 20px;
+    color: beige;
+    font-family: Georgia;
+    font-weight: bold;
+    background-color: rgb(60, 10, 82);
+    border-radius: 10px;
+    border: 1px solid rgb(128, 50, 205);
+    transition: 0.3s;
+}
