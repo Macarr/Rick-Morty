@@ -1,0 +1,12 @@
+.contenedor{
+    width: 60vw;
+    height: 30vh;
+    background-color: rgba(113, 16, 137, 0.775);
+    border-radius: 3%;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+
+}

@@ -1,5 +1,6 @@
 import {useState} from "react";
 import validation from "./Validation";
+import style from "./Form.module.css";
 
 const Form = ({login}) => {
  const [userData, setUserData] = useState({ username: "", password: "" });
@@ -33,7 +34,7 @@ const Form = ({login}) => {
     
     <form onSubmit={handleSubmit}> 
 
-
+          <div className={style.contenedor}>
             <label htmlFor="username" >Username:</label>
       
             <input type="text" 
@@ -53,7 +54,7 @@ const Form = ({login}) => {
 
                     
             <button>LOGIN</button>
-
+            </div>
     </form>
     
   )

@@ -27,16 +27,16 @@ function App () {
  }, [access]);
   
   const onSearch = (character)=> {
-    fetch(`http://localhost:3001/rickandmorty/character/${character}`)
+    fetch(`http://localhost:3001/rickandmorty/onsearch/${character}`)
       .then((response) => response.json())
       .then((data) => {
-         if (data.name) {
+         if (data.id) {
             setCharacters((oldChars) => [...oldChars, data]);
          } else {
-            window.alert('No hay personajes con ese ID');
+            alert('No hay personajes con ese ID');
          }
-      });
-
+      })
+      .catch(err => console.log(err))
 
   }
 
