@@ -1,20 +1,35 @@
-var http = require("http");
-const characters =require('./src/utils/data.js')
+// const http = require("http");
+// const getCharById = require("./src/controllers/getCharById");
+// const getCharDetail = require ("./src/controllers/getCharDetail");
 
+// http.createServer((req, res)=>{
+//  res.setHeader('Access-Control-Allow-Origin', '*');
 
+//     let id = req.url.split('/').at(-1);
 
-http.createServer((req, res)=>{
- res.setHeader('Access-Control-Allow-Origin', '*');
+//     if(req.url.includes("onsearch")){
 
-    if(req.url.includes("rickandmorty/character")){
-       let id= req.url.split('/').at(-1);
+//         getCharById(res, id)
+//     }
 
-        let charactersFilter = characters.find(character=> character.id === Number(id));
+//     if(req.url.includes("detail")){
 
-        res
-        .writeHead(200, {"Content-Type":"application/json"})
-        .end(JSON.stringify(charactersFilter))
-    }
-    
-}) 
-.listen(3001,"localhost")
+//         getCharDetail(res, id)
+//     }
+
+// })
+// .listen(3001,"localhost")
+
+const express = require("express");
+const server = express();
+const PORT = 3001;
+const router = require("./src/routes/index.js");
+
+const cors = require("cors");
+
+server.use(cors());
+server.use(express.json());
+
+server.use("/", router);
+
+server.listen(PORT, () => console.log("Server raised in port " + PORT));
